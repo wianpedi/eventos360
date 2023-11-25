@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
+use App\Models\Eventos;
+use App\Models\Compra;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $eventos = Eventos::all();
+    
+    return view('home', compact('eventos'));
+        
     }
+    public function welcome()
+{
+    $eventos = Eventos::all();
+    return view('welcome', compact('eventos'));
+}
+
 }

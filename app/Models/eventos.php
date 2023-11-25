@@ -3,16 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Eventos extends Model
 {
-    // Definición de la clase Eventos
+
     protected $fillable = ['codigo', 'nombre', 'ubicacion', 'fecha', 'entradas', 'descripcion', 'foto'];
-    public function mostrarEventos()
-{
-    $eventos = Eventos::all();
-
-    return view('mostrar-eventos', compact('eventos'));
-}
-
 }

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('fecha');
             $table->string('entradas');
             $table->string('descripcion');
+            $table->decimal('precio', 10, 2)->nullable();
             $table->string('foto');
             $table->timestamps();
         });
